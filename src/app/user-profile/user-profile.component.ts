@@ -39,15 +39,15 @@ export class UserProfileComponent implements OnInit {
     this.getMovies();
   }
 
-  removeFavoriteFromList(movieID: any): void {
+  removeFavoriteMovies(movieID: any): void {
     this.fetchApiData.deleteFavoriteMovie(movieID).subscribe(
       (response: any) => {
-        this.snackBar.open('Movie has been removed!', 'Ok', {
+        this.snackBar.open('Movie has been removed', 'Ok', {
           duration: 2000,
         });
         this.ngOnInit();
       },
-      // in case of error, the error will be catched below
+      // error handler
       (response: any) => {
         this.snackBar.open(
           'Something is wrong. Please, try again', 'OK', {
@@ -121,7 +121,7 @@ export class UserProfileComponent implements OnInit {
         localStorage.setItem('username', response.Username);
         // Logic for a successful user update goes here! (To be implemented)
         this.snackBar.open(
-          response.Username + ' You have successfully updated you Profile!',
+          response.Username + ' You have successfully updated your Profile',
           '',
           {
             duration: 2000,

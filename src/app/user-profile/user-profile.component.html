@@ -1,1 +1,69 @@
-<p>user-profile works!</p>
+<app-nav-bar></app-nav-bar>
+<form class="profileStyle">
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>update Username</mat-label>
+      <input matInput [(ngModel)]="userData.Username" name="Username" type="text" />
+      <mat-hint>Only a minimum of 6 characters are allowed, no spaces or special characters</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>update Password</mat-label>
+      <input matInput [(ngModel)]="userData.Password" placeholder="******" name="Password" type="password" />
+      <mat-hint>min 6 characters</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>update Email Address</mat-label>
+      <input matInput [(ngModel)]="userData.Email" name="Email" type="email" />
+      <mat-hint>enter a valid Email Address</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>update Date of Birth</mat-label>
+
+      <input matInput [(ngModel)]="userData.Birthday" type="date" placeholder="Birthday" name="Birthday" />
+    </mat-form-field>
+  </p>
+  <button mat-raised-button color="primary" style="margin-right: 10px" (click)="updateUser()">
+    <mat-icon>update</mat-icon> Update Profile
+  </button>
+  <button mat-raised-button color="warn" (click)="openDialog()">
+    <mat-icon>delete_forever</mat-icon> Delete Profile
+  </button>
+</form>
+
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let movie of userFavouritesMovies">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ movie.Title }}</mat-card-title>
+        </mat-card-header>
+
+        <img mat-card-image class="cardStyle" src="{{ movie.ImagePath }}" alt="{{ movie.Title }}" />
+        <mat-card-content>
+          Director: {{ movie.Director.Name }}
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button (click)="openDescriptionDialog(movie)" mat-button color="primary">
+            Movie Infos
+          </button>
+          <button (click)="openGenreDialog(movie.Genre)" mat-button color="primary">
+            Genre
+          </button>
+          <button (click)="openDirectorDialog(movie.Director)" mat-button color="primary">
+            Director
+          </button>
+          <button (click)="removeFavoriteMovies(movie._id)" mat-button color="primary">
+            <mat-icon color="warn">bookmark_remove</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
