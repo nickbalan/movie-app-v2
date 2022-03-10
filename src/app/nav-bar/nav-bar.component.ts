@@ -1,3 +1,9 @@
+/**
+ * The NavBar displays the navigation meniu. 
+ * The NavBar has the MyFlix, Profile, and Logout button.
+ * Depending on which navigation button is clicked, the NavBar will render it.
+ * @module NavBarComponent
+ */
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -12,16 +18,17 @@ export class NavBarComponent implements OnInit {
   ngOnInit(): void { }
 
   /**
-   * Navigates to `'/profile'`
-   * This is called from a button.
+   * If the user clicks on the Profile button, 
+   * then navigate to the user profile
    */
    toProfile(): void {
     this.router.navigate(['users']);
   }
 
   /**
-   * Logs out the user by clearing localStorage and navigating to `'/welcome'`
-   * This is called from a logout button.
+   * If the user clicks on the Logout button,
+   * then log out the user and clear localStorage;
+   * after that, navigate to the welcome page.
    */
   logout(): void {
     localStorage.clear();
@@ -29,8 +36,8 @@ export class NavBarComponent implements OnInit {
   }
 
   /**
-   * Navigates to `'movies'`
-   * This is called from the page logo-button.
+   * If the user clicks on the MyFlix button,
+   * then navigate to 'movies' page
    */
   toMovies(): void {
     this.router.navigate(['movies']);
