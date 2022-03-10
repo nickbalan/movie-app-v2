@@ -1,3 +1,7 @@
+/**
+ * Renders a login form for the user.
+ * @module UserLoginFormComponent
+ */
 import { Component, OnInit, Input } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
 // This imports the dialog
@@ -12,6 +16,11 @@ import { Router } from '@angular/router';
   templateUrl: './user-login-form.component.html',
   styleUrls: ['./user-login-form.component.scss']
 })
+
+/**
+ * The input userData is empty strings by default.
+ * The user updates userData.
+ */
 export class UserLoginFormComponent implements OnInit {
   @Input() userData = {
     Username: '',
@@ -28,7 +37,13 @@ export class UserLoginFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // Sends the form inputs to the backend
+  /**
+   * @function loginUser is responsible for sending the form inputs to the backend
+   * Attempts to log in the user with user's credentials.
+   * Uses [[FetchApiDataService.userLogin]].
+   * Saves username and token in localStorage and redirects to `/movies` page upon successful login.
+   * Gives a snackbar message if login fails.
+   */
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe((response) => {
       // Logic for the user login

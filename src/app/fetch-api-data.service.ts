@@ -1,3 +1,7 @@
+/**
+ * This file contains all the functions for API calls.
+ * @module FetchApiDataService
+ */
 import { Injectable } from '@angular/core';
 import {
   HttpClient,
@@ -11,19 +15,37 @@ import {
 import { map, catchError } from 'rxjs/operators';
 
 
-// Declaring the API url that will provide data for the client App
+/**
+ * The root URL for the hosted API.
+ * Declaring the API URL that will provide the data, then the user calls it.
+ */
 const apiUrl = 'https://movies-api-21.herokuapp.com';
 
 @Injectable({
   providedIn: 'root'
 })
 
+/** 
+ * Inject the HttpClient module to the constructor params
+ * This will provide HttpClient to the entire class, making it available via this.http
+ */
 export class FetchApiDataService {
-  // Inject the HttpClient module to the constructor params
-  // This will provide HttpClient to the entire class, making it available via this.http
   constructor(private http: HttpClient) { }
 
-  // Making the API call for the user registration endpoint
+  /**
+   * This function calls the user registration endpoint.
+   * @function userRegistration
+   * @param userDetails {Username: <string>, Password: <string>
+   * Email: <string>, BirthDate: <string (optional)>}
+   * @returns data for new user in JSON format
+   * { _id: <string>,
+   *   Username: <string>,
+   *   Password: <string> (hashed),
+   *   Email: <string>,
+   *   Birthday: <string>
+   *   FavoriteMovies: []
+   * }
+   */
   public userRegistration(userDetails: any): Observable<any> {
     return this.http
       .post(apiUrl + '/users', userDetails)
@@ -33,9 +55,20 @@ export class FetchApiDataService {
   }
 
   /**
-   * Call the user login end-point from API
-   * @param userDetails {any}
-   * @returns user's data in json format
+   * This function calls the user login endpoint.
+   * @function userLogin
+   * @param userDetails {Username: <string>, Password: <string>}
+   * @returns  data for logged in user and JWT in JSON format
+   * { user: {
+   *   _id: <string>,
+   *   Username: <string>,
+   *   Password: <string> (hashed),
+   *   Email: <string>,
+   *   Birthday: <string>,
+   *   FavoriteMovies: [<string>]
+   *   },
+   *   token: <string>
+   * }
    */
   public userLogin(userDetails: any): Observable<any> {
     console.log(userDetails);
@@ -47,9 +80,19 @@ export class FetchApiDataService {
   }
 
   /**
-   * Call and get all movies from API
+   * This function gets all movies data after login.
    * @function getAllMovies
-   * @return array of movies object in json format
+   * Pulls token from localStorage for auth.
+   * @returns object containing array of data for all movies
+   * {[
+   *   Genre: { Name: <string>, Description: <string> },
+   *   Director: { Name: <string>, Bio: <string>, Birth: <string>, Deth: <string> },
+   *   _id: <string>,
+   *   Title: <string>,
+   *   Description: <string>,
+   *   Featured: <boolean>,
+   *   ImagePath: <string> (example: "SchindlersList.png"),
+   * ]}
    */
   getAllMovies(): Observable<any> {
     const token = localStorage.getItem('token');
@@ -67,10 +110,20 @@ export class FetchApiDataService {
   }
 
   /**
-   * Get one movie by Title from API
+   * This function gets the data for one single movie by title.
    * @function getMovie
-   * @param Title {any}
-   * @returns a movie object in json format
+   * Pulls token from localStorage for authentication
+   * @param Title <any>
+   * @returns object containing data for one single movie.
+   * {
+   *   Genre: { Name: <string>, Description: <string> },
+   *   Director: { Name: <string>, Bio: <string>, Birth: <string>, Deth: <string> },
+   *   _id: <string>,
+   *   Title: <string>,
+   *   Description: <string>,
+   *   Featured: <boolean>,
+   *   ImagePath: <string> (example: "SchindlersList.png"),
+   * }
    */
   getMovie(Title: any): Observable<any> {
     const token = localStorage.getItem('token');
@@ -85,10 +138,11 @@ export class FetchApiDataService {
   }
 
   /**
-   * Get one director Name from API
+   * Gets one director name from API
    * @function getDirector
+   * Pulls token from localStorage for authentication
    * @param Director {any}
-   * @return a director's info in json format
+   * @return a director's info in JSON format
    */
   getDirector(Director: any): Observable<any> {
     const token = localStorage.getItem('token');
@@ -103,10 +157,11 @@ export class FetchApiDataService {
   }
 
   /**
-   * Get one genre info from API
+   * Gets one genre data from API
    * @function getGenre
+   * Pulls token from localStorage for authentication
    * @param Genre {any}
-   * @return a genre data in json format
+   * @return one genre's data in JSON format
    */
   getGenre(Genre: any): Observable<any> {
     const token = localStorage.getItem('token');
@@ -121,9 +176,17 @@ export class FetchApiDataService {
   }
 
   /**
-   * Get the user info from API
+   * This function calls to get user's data from API.
    * @function getUser
-   * @return a user's information in json format
+   * Pulls token from localStorage for authentication.
+   * @returns object containing user's data.
+   * { _id: <string>,
+   *   Username: <string>,
+   *   Password: <string> (hashed),
+   *   Email: <string>,
+   *   Birthday: <string>
+   *   FavoriteMovies: [<string>]
+   * }
    */
   getUser(): Observable<any> {
     const token = localStorage.getItem('token');
@@ -139,9 +202,10 @@ export class FetchApiDataService {
   }
 
   /**
-   * Get the favorite movies from API
+   * This function gets the movie data of the user's favorite movie.
    * @function getFavoriteMovies
-   * @returns a list of the user's favorite movies in json format
+   * Pulls token from localStorage for authentication.
+   * @returns [<string>]
    */
   getFavoriteMovies(): Observable<any> {
     const token = localStorage.getItem('token');
@@ -157,10 +221,18 @@ export class FetchApiDataService {
   }
 
   /**
-   * Add a movie to favourite Movies
-   * @function addFavoriteMovie
-   * @param MovieID {any}
-   * @returns the user's favorite list in json format
+   * This function adds a movie to a user's favorite list.
+   * @function addFavoriteMovies
+   * Pulls token from localStorage for authentication.
+   * @param movieID <any>
+   * @returns updated user data
+   * { _id: <string>,
+   *   Username: <string>,
+   *   Password: <string> (hashed),
+   *   Email: <string>,
+   *   Birthday: <string>
+   *   FavoriteMovies: [<string>]
+   * }
    */
   addFavoriteMovie(MovieID: any): Observable<any> {
     const token = localStorage.getItem('token');
@@ -176,10 +248,18 @@ export class FetchApiDataService {
   }
 
   /**
-   * Delete a movie from the favorite movies list
+   * Deletes a movie from a user's favorite list.
    * @function deleteFavoriteMovie
-   * @param MovieID {any}
-   * @returns updated user's information in json format after removed one favorite movie
+   * Pulls token from localStorage for authentication.
+   * @param movieID <any>
+   * @returns updated user data
+   * { _id: <string>,
+   *   Username: <string>,
+   *   Password: <string> (hashed),
+   *   Email: <string>,
+   *   Birthday: <string>
+   *   FavoriteMovies: [<string>]
+   * }
    */
   deleteFavoriteMovie(MovieID: any): Observable<any> {
     const token = localStorage.getItem('token');
@@ -195,10 +275,18 @@ export class FetchApiDataService {
   }
 
   /**
-   * Edit user's info from API
-   * @function editUser
-   * @param userDetails {any}
-   * @returns updated user's informations in json format
+   * This function updates the user's account info.
+   * Pulls username and token from local storage to use for endpoint and authorization.
+   * @param userDetails {Username: <string>, Password: <string>,
+   * Email: <string>, BirthDate: <string>} (all fields optional)
+   * @returns updated user info
+   * { _id: <string>,
+   *   Username: <string>,
+   *   Password: <string> (hashed),
+   *   Email: <string>,
+   *   Birthday: <string>
+   *   FavoriteMovies: [<string>]
+   * }
    */
   editUser(userDetails: any): Observable<any> {
     const token = localStorage.getItem('token');
@@ -214,8 +302,9 @@ export class FetchApiDataService {
   }
 
   /**
-   * call API end-point to delete the current user
+   * This funtion deletes the current user's account
    * @function deleteUser
+   * Pulls token from localStorage for authentication.
    * @returns delete status
    */
   deleteUser(): Observable<any> {
