@@ -55,6 +55,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Check out the [MyFlix Angular Client](https://nickbalan.github.io/myflix-angular-client) page.
 
-## MyFlix Angular Client livescreen
+## MyFlix Angular Client screenshot
 
-![Livescreen](./src/assets/img/Livescreen_MyFlix_Angular_Client.jpg?raw=true)
+![Livescreen](src/assets/img/Livescreen_MyFlix_Angular_Client.JPG)
