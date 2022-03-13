@@ -8,9 +8,9 @@
           <mat-card-title>{{ movie.Title }}</mat-card-title>
         </mat-card-header>
 
-        <img mat-card-image class="cardStyle" src="{{ movie.ImagePath }}" alt="{{ movie.Title }}" />
+        <img mat-card-image class="cardStyle" src="{{ movie.imgUrl }}" alt="{{ movie.Title }}" />
         <mat-card-content>
-          Directed by: {{ movie.Director.Name }}
+          Directed by: {{ movie.Director[0] }}
         </mat-card-content>
 
         <mat-card-actions>
