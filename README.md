@@ -50,3 +50,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Link to live hosted MyFlix Angular Client
+
+Check out the [MyFlix Angular Client](https://nickbalan.github.io/myflix-angular-client) page.
+
+## MyFlix Angular Client livescreen
+
+![Livescreen](./src/assets/img/Livescreen_MyFlix_Angular_Client.jpg?raw=true)
