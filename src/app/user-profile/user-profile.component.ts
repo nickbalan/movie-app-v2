@@ -106,8 +106,8 @@ export class UserProfileComponent implements OnInit {
             }
           );
         }
-        console.log('this.userFavouritesMovies ', this.userFavouritesMovies);
-        console.log('this.movies ', this.movies);
+        //console.log('this.userFavouritesMovies ', this.userFavouritesMovies);
+        //console.log('this.movies ', this.movies);
       },
       (error: any) => {
         console.error(error);

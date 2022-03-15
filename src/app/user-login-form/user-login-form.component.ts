@@ -50,7 +50,7 @@ export class UserLoginFormComponent implements OnInit {
       this.dialogRef.close(); // Closes the modal after login
       localStorage.setItem('user', response.user.Username);
       localStorage.setItem('token', response.token);
-      console.log(response);
+      //console.log(response);
       this.snackBar.open('Logged In', 'OK', {
         duration: 2000
       });
