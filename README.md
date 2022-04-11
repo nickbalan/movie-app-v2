@@ -1,4 +1,4 @@
-# MyFlix Angular Client
+# MyFlix Angular Client (Movie App)
 
 This project was generated initially with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
@@ -10,7 +10,7 @@ Using Angular, build the client-side for an application called MyFlix Angular Cl
 
 ## The 5 W's
 - Who? — The users of the MyFlix Angular Client and codebase, including other web developers and designers
-- What? — A single-page, responsive MyFlix Angular Client (Movie's App) built with Angular, routing, and several interface views. The client-side developed in this project supports the existing server-side from [MyFlix API](https://github.com/nickbalan/myflix) by facilitating user requests and rendering the response from the server-side via several different interface views. The app includes relevant documentation and handoff deliverables, including a [Kanban board](https://trello.com/b/uaMESjar/a6-movie-app-kanban-project) containing user stories and story points
+- What? — A single-page, responsive MyFlix Angular Client (Movie App) built with Angular, routing, and several interface views. The client-side developed in this project supports the existing server-side from [MyFlix API](https://github.com/nickbalan/myflix) by facilitating user requests and rendering the response from the server-side via several different interface views. The app includes relevant documentation and handoff deliverables, including a [Kanban board](https://trello.com/b/uaMESjar/a6-movie-app-kanban-project) containing user stories and story points
 - When? — Users should be able to use the app whenever they want to read information about different movies or update their user information
 - Where? — The app is hosted online. It is responsive and can therefore be used anywhere and on any device, giving all users an equal experience
 - Why? — Movie enthusiasts should be able to access information about different movies, directors, and genres whenever they want. The app demonstrates my Angular skills and ability to create straightforward documentation for other developers and employers.
@@ -53,7 +53,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 To get more help on the Angular CLI, use `ng help` or check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## Link to live hosted MyFlix Angular Client
+## Link to live hosted MyFlix Angular Client (Movie App)
 Check out the [MyFlix Angular Client](https://nickbalan.github.io/myflix-angular-client) page.
 
 ## MyFlix Angular Client screenshot
