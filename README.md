@@ -1,4 +1,4 @@
-# MyFlix Angular Client (Movie App)
+# MyFlix Angular Client (Movie App). Technical Case Study
 
 This project was generated initially with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
@@ -19,7 +19,7 @@ Using Angular, build the client-side for an application called MyFlix Angular Cl
 - As a user, I should be able to receive information on movies, directors, and genres so that I can learn more about movies I've watched or am interested in
 - As a user, I should be able to create a profile so I can save data about my favorite movies.
 
-## Technical Requirements
+## Technical Requirements & Solutions
 - The application must be written in Angular (version 9 or later)  
 - The application requires the latest version of Node.js and npm package  
 - The application must contain user registration and login forms  
