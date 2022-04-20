@@ -28,17 +28,26 @@ Using Angular, build the client-side for an application called MyFlix Angular Cl
 - The the existing server-side [MyFlix API](https://github.com/nickbalan/myflix) must contain technical JSDoc Documentation
 - The project must be hosted on GitHub Pages.
 
-## Breakdown Project Deliverables
-- Main View Page
-- Profile View Page
-- Registration Page
-- Login View Page
-- Movie List
-- Movie View Page
-- Movie Card 
-- Genre View Page
-- Director View Page
-- Initiating the project and configuring the tools.
+## Breakdown Project Deliverables in Story Points
+- Profile View Page -> 21 story points
+- Registration Page -> 8 story points
+- Login View Page -> 8 story points 
+- Movie List -> 8 story points
+- Movie View Page -> 5 story points
+- Movie Card -> 5 story points
+- Genre View Page -> 5 story points
+- Director View Page -> 5 story points
+- Initiating the project and configuring the tools -> 2 story points
+- Main View Page -> 21 story points
+- Profile View Page -> 21 story points
+- Registration Page -> 8 story points
+- Login View Page -> 8 story points 
+- Movie List -> 8 story points
+- Movie View Page -> 5 story points
+- Movie Card -> 5 story points
+- Genre View Page -> 5 story points
+- Director View Page -> 5 story points
+- Initiating the project and configuring the tools -> 2 story points.
 
 ## Key Features  
 - The app should display a welcome view where users will be able to either login or register an account.  
