@@ -5,6 +5,9 @@ This project was generated initially with [Angular CLI](https://github.com/angul
 ## Objective
 Using Angular, build the client-side for an application called MyFlix Angular Client based on existing server-side code (REST API and database), supporting documentation.
 
+## Context
+Angular is a trendy framework used for a wide range of mobile and desktop applications. It's particularly well-suited to large projects and projects requiring a complex user interface because it comes with a variety of built-in modules and services.
+
 ## My Role
 - Full-Stack Web Developer
 
