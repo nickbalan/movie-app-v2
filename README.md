@@ -8,8 +8,11 @@ Using Angular, build the client-side for an application called MyFlix Angular Cl
 ## Context
 Angular is a trendy framework used for a wide range of mobile and desktop applications. It's particularly well-suited to large projects and projects requiring a complex user interface because it comes with a variety of built-in modules and services.
 
-## Project Owner and Acknowledgement
-- CareerFoundry
+## Project Deliverables Acknowledgement
+- CareerFoundry (25.02.2021 - 17.03.2022)
+
+## Project Improvement Strategies
+- Nick Balan (18.03.2022 - Current)
 
 ## My Role
 - Full-Stack Web Developer
