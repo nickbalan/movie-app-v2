@@ -4,7 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
 /**
- * Renders a form for deleting a user account.
+ * Renders a form for deleting a user account:
  * @module DeleteUserComponent
  */
 @Component({
@@ -22,8 +22,8 @@ export class DeleteAccountComponent implements OnInit {
   ngOnInit(): void {}
 
   /**
-   * Deletes the user account with [[FetchApiDataService.deleteUser]].
    * @function deleteUser
+   * Deletes the user account with [[FetchApiDataService.deleteUser]].
    * @returns - clears the localStorage and navigates to the welcome page.
    */
   deleteUser(): void {

@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 /**
- * The NavBar displays the navigation menu with MyFlix, Profile, and Logout buttons.
- * When a user clicks on links, it renders MyFlix (all movies), Profile (user profile), and Logout (logging out from the account).
+ * Displays the navigation menu with MyFlix, Profile, and Logout buttons:
  * @module NavBarComponent
  */
 @Component({
@@ -11,6 +10,10 @@ import { Router } from '@angular/router';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss'],
 })
+
+/**
+ * When a user clicks on links, it renders MyFlix (all movies), Profile (user profile), and Logout (logging out from the account).
+ */
 export class NavBarComponent implements OnInit {
   constructor(private router: Router) {}
 
@@ -32,8 +35,7 @@ export class NavBarComponent implements OnInit {
   }
 
   /**
-   * If the user clicks on the MyFlix button,
-   * then navigate to 'movies' page
+   * When a user clicks on the MyFlix button, it navigates to the 'movies' page.
    */
   toMovies(): void {
     this.router.navigate(['movies']);

@@ -8,17 +8,20 @@ import { DirectorViewComponent } from '../director-view/director-view.component'
 import { MovieDetailsComponent } from '../movie-details/movie-details.component';
 
 /**
+ * Renders a grid of movie cards for each movie in the database:
  * @module MovieCardComponent
- * Renders a responsive grid of movie cards for each movie in the database.
- * Each movie card has an image, links to open dialogs.
- * The toggle button adds or removes a movie from the users favorite movie list.
- * Renders the NavBar Component.
  */
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss'],
 })
+
+/**
+ * Each movie card has an image, links to open dialogs.
+ * The toggle button adds or removes a movie from the users favorite movie list.
+ * Renders the NavBar Component.
+ */
 export class MovieCardComponent implements OnInit {
   movies: any[] = [];
   constructor(
@@ -113,9 +116,10 @@ export class MovieCardComponent implements OnInit {
 
   /**
    * @function openDescriptionDialog
-   * @param {string} movie.Title - an object containing the Movie title
-   * @param {string} movie.Description - an object containing the Movie description
-   * @param {string} movie.imgUrl - an object containing the Movie image
+   * @param {string} movie - an object containing:
+   * @param {string} movie.Title - an object element containing the Movie title.
+   * @param {string} movie.Description - an object element containing the Movie description.
+   * @param {string} movie.imgUrl - an object element containing the Movie image.
    * Opens a dialog box with a MovieDetailsComponent, passing the movie data into the component.
    */
   openDescriptionDialog(movie: any): void {
@@ -127,8 +131,9 @@ export class MovieCardComponent implements OnInit {
 
   /**
    * @function openGenreDialog
-   * @param {string} Genre.Name - an object containing the Genre name
-   * @param {string} Genre.Description - an object containing the Genre Description
+   * @param {string} Genre - an object containing:
+   * @param {string} Genre.Name - an object element containing the Genre name.
+   * @param {string} Genre.Description - an object element containing the Genre description.
    * Opens a dialog box with a GenreViewComponent, passing the Genre data into the component.
    */
   openGenreDialog(Genre: any): void {
@@ -140,9 +145,10 @@ export class MovieCardComponent implements OnInit {
 
   /**
    * @function openDirectorDialog
-   * @param {string} Director.Name - an object containing the Director name
-   * @param {string} Director.BirthYear - an object containing the Director birthyear
-   * @param {string} Director.Biography - an object containing the Director biography
+   * @param {string} Director - an object containing:
+   * @param {string} Director.Name - an object element containing the Director name.
+   * @param {string} Director.BirthYear - an object element containing the Director birthyear.
+   * @param {string} Director.Biography - an object element containing the Director biography.
    * Opens a dialog box with a DirectorViewComponent, passing the Director data into the component.
    */
   openDirectorDialog(Director: any): void {
