@@ -1,10 +1,3 @@
-/**
- * Renders user profile information
- * Renders the favorite movies list in the user profile.
- * Renders The Nav-Bar Component.
- *
- * @module UserProfileComponent
- */
 // Imports Angular Material UI
 import { Component, OnInit, Input } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -17,15 +10,26 @@ import { DirectorViewComponent } from '../director-view/director-view.component'
 import { MovieDetailsComponent } from '../movie-details/movie-details.component';
 import { DeleteAccountComponent } from '../delete-account/delete-account.component';
 
+/**
+ * Renders the user profile information:
+ * @module UserProfileComponent
+ */
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.scss']
+  styleUrls: ['./user-profile.component.scss'],
 })
+
+/**
+ * Renders the favorite movies list in the user profile.
+ * Renders the NavBar component.
+ * @param {string} userData - an object containing:
+ * @param {string} userData.Username - an object element containing the Username of the user.
+ * @param {string} userData.Password - an object element containing the Password of the user.
+ * @param {string} userData.Email - an object containing the Email of the user.
+ * @param {string} userData.FavoriteMovies - an object containing the Favorite movies of the user.
+ */
 export class UserProfileComponent implements OnInit {
-  /**
-   * The user updates the 'userData'.
-   */
   @Input() userData = {
     Username: '',
     Password: '',
@@ -38,23 +42,21 @@ export class UserProfileComponent implements OnInit {
     public fetchApiData: FetchApiDataService,
     public snackBar: MatSnackBar,
     public dialog: MatDialog
-  ) { }
+  ) {}
 
   /**
-   * Stores data about each movie.
+   * Stores the data about each movie.
    */
   movies: any[] = [];
 
   /**
-   * A subset of movies containing only the user's favorite list.
+   * Stores a subset of movies containing only the user's favorite movie list.
    */
   userFavouritesMovies: any[] = [];
 
   /**
-   * Fetches the data of the logged-in user.
-   * Then, downloads all the movie data and maps of the user's favorite movies.
-   * If the API call fails for some reason, 
-   * then the user will be logged out and returned to the welcome screen.
+   * Fetches the logged-in user's data, downloads all the movie data, and maps the user's favorite movies.
+   * If the API call fails, the user will be logged out and returned to the welcome screen.
    */
   ngOnInit(): void {
     this.getUser();
@@ -62,11 +64,10 @@ export class UserProfileComponent implements OnInit {
   }
 
   /**
-   * @function removeFavoriteMovies,
-   * @param movieID string containing the ID of a movie,
-   * remove the movie ID from the user's favorite list,
-   * with DELETE request [[FetchApiDataService.removeFavoriteMovie]].
-   * Then, reloads the user's profile page, to update the user's favorite list.
+   * @function removeFavoriteMovies
+   * @param {string} movieID - string containing the movie ID.
+   * Remove the movie ID from the user's favorite list using the DELETE request [[FetchApiDataService.removeFavoriteMovie]].
+   * Then, reloads the user's profile page to update the user's favorite list.
    */
   removeFavoriteMovies(movieID: any): void {
     this.fetchApiData.deleteFavoriteMovie(movieID).subscribe(
@@ -78,11 +79,9 @@ export class UserProfileComponent implements OnInit {
       },
       // error handler
       (response: any) => {
-        this.snackBar.open(
-          'Something is wrong. Please, try again', 'OK', {
+        this.snackBar.open('Something is wrong. Please, try again', 'OK', {
           duration: 2000,
-        }
-        );
+        });
       }
     );
     this.ngOnInit();
@@ -90,8 +89,8 @@ export class UserProfileComponent implements OnInit {
 
   /**
    * @function getMovies
-   * Downloads all the movie data and save it into this.movies.
-   * Then filter out the favorite movie list and save them into this.favoriteMovies.
+   * @returns - downloads all the movie data and save it into this.movies.
+   * @returns - then, filter out the favorite movie list and save them into this.favoriteMovies.
    */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe(
@@ -117,7 +116,10 @@ export class UserProfileComponent implements OnInit {
 
   /**
    * @function openDescriptionDialog
-   * @param movie {Title: <string>, Description: <string>, ... }
+   * @param {string} movie - an object containing:
+   * @param {string} movie.Title - an object element containing the Movie title.
+   * @param {string} movie.Description - an object element containing the Movie description.
+   * @param {string} movie.imgUrl - an object element containing the Movie image.
    * Opens a dialog box with a MovieDetailsComponent, passing the movie data into the component.
    */
   openDescriptionDialog(movie: any): void {
@@ -129,7 +131,9 @@ export class UserProfileComponent implements OnInit {
 
   /**
    * @function openGenreDialog
-   * @param Genre {Name: <string>, Description: <string>}
+   * @param {string} Genre - an object containing:
+   * @param {string} Genre.Name - an object element containing the Genre name.
+   * @param {string} Genre.Description - an object element containing the Genre description.
    * Opens a dialog box with a GenreViewComponent, passing the Genre data into the component.
    */
   openGenreDialog(Genre: any): void {
@@ -141,7 +145,10 @@ export class UserProfileComponent implements OnInit {
 
   /**
    * @function openDirectorDialog
-   * @param Director {Name: <string>, Bio: <string>, Birth: <string>}
+   * @param {string} Director - an object containing:
+   * @param {string} Director.Name - an object element containing the Director name.
+   * @param {string} Director.BirthYear - an object element containing the Director birthyear.
+   * @param {string} Director.Biography - an object element containing the Director biography.
    * Opens a dialog box with a DirectorViewComponent, passing the Director data into the component.
    */
   openDirectorDialog(Director: any): void {
@@ -152,17 +159,15 @@ export class UserProfileComponent implements OnInit {
   }
 
   /**
-   * When user clicks on Delete Profile button,
-   * then DELETE the account profile.
+   * When the user clicks on the Delete button from Profile, then DELETE the account profile.
    */
   openDialog() {
     this.dialog.open(DeleteAccountComponent);
   }
 
   /**
-   * API is called to get data for the user.
-   * Pulls token from localStorage.
-   * @returns object containing data for the user:
+   * Then, it calls the API to get data for the user and Pulls the token from localStorage.
+   * @returns - an object containing data for the user:
    * {[  _id: <string>,
    *     Username: <string>,
    *     Password: <string> (hashed),
@@ -182,11 +187,8 @@ export class UserProfileComponent implements OnInit {
   }
 
   /**
-   * Updates the user's data. 
-   * Only sends data to the server for fields that have been updated.
-   * If the data is formatted poorly, 
-   * then an error from the server should trigger a warning message,
-   * to the user to check their data format.
+   * Then, it updates the user's data and sends data (the updated fields) to the database.
+   * If the data is formatted poorly, then an error from the server should trigger a warning message to check the data format.
    */
   updateUser(): void {
     this.fetchApiData.editUser(this.userData).subscribe(
@@ -208,5 +210,4 @@ export class UserProfileComponent implements OnInit {
       }
     );
   }
-
 }
