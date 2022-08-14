@@ -12,7 +12,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 
 /**
- * @param  data - an object containing Director data:
+ * @param data - an object containing Director data:
  * @param {string} data.Director.Name - an object element containing the Director name.
  * @param {string} data.Director.BirthYear - an object element containing the Director birthyear.
  * @param {string} data.Director.Biography - an object element containing the Director biography.
