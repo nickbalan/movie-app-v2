@@ -1,23 +1,106 @@
 <!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>my-flix-angular-client</title><meta name="description" content="Documentation for my-flix-angular-client"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">my-flix-angular-client</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1> my-flix-angular-client</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
-<a href="#myflixangularclient" id="myflixangularclient" style="color: inherit; text-decoration: none;">
-  <h1>MyFlixAngularClient</h1>
+<a href="#myflix-angular-client-movie-app-technical-case-study" id="myflix-angular-client-movie-app-technical-case-study" style="color: inherit; text-decoration: none;">
+  <h1>MyFlix Angular Client (Movie App). Technical Case Study</h1>
 </a>
-<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 13.2.5.</p>
+<p>This project was generated initially with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 13.2.5.</p>
+
+<a href="#objective" id="objective" style="color: inherit; text-decoration: none;">
+  <h2>Objective</h2>
+</a>
+<p>Using Angular, build the client-side for an application called MyFlix Angular Client based on existing server-side code (REST API and database), supporting documentation.</p>
+
+<a href="#context" id="context" style="color: inherit; text-decoration: none;">
+  <h2>Context</h2>
+</a>
+<p>Angular is a trendy framework used for a wide range of mobile and desktop applications. It&#39;s particularly well-suited to large projects and projects requiring a complex user interface because it comes with a variety of built-in modules and services.</p>
+
+<a href="#project-deliverables-acknowledgement" id="project-deliverables-acknowledgement" style="color: inherit; text-decoration: none;">
+  <h2>Project Deliverables Acknowledgement</h2>
+</a>
+<ul>
+<li>CareerFoundry (25.02.2021 - 17.03.2022)</li>
+</ul>
+
+<a href="#project-improvement-strategies" id="project-improvement-strategies" style="color: inherit; text-decoration: none;">
+  <h2>Project Improvement Strategies</h2>
+</a>
+<ul>
+<li>Nick Balan (18.03.2022 - Current)</li>
+</ul>
+
+<a href="#my-role" id="my-role" style="color: inherit; text-decoration: none;">
+  <h2>My Role</h2>
+</a>
+<ul>
+<li>Full-Stack Web Developer</li>
+</ul>
+
+<a href="#the-5-w39s" id="the-5-w39s" style="color: inherit; text-decoration: none;">
+  <h2>The 5 W&#39;s</h2>
+</a>
+<ul>
+<li>Who? — The users of the MyFlix Angular Client and codebase, including other web developers and designers</li>
+<li>What? — A single-page, responsive MyFlix Angular Client (Movie App) built with Angular, routing, and several interface views. The client-side developed in this project supports the existing server-side from <a href="https://github.com/nickbalan/myflix">MyFlix API</a> by facilitating user requests and rendering the response from the server-side via several different interface views. The app includes relevant documentation and handoff deliverables, including a <a href="https://trello.com/b/uaMESjar/a6-movie-app-kanban-project">Kanban board</a> containing user stories and story points</li>
+<li>When? — Users should be able to use the app whenever they want to read information about different movies or update their user information</li>
+<li>Where? — The app is hosted online. It is responsive and can therefore be used anywhere and on any device, giving all users an equal experience</li>
+<li>Why? — Movie enthusiasts should be able to access information about different movies, directors, and genres whenever they want. The app demonstrates my Angular skills and ability to create straightforward documentation for other developers and employers.</li>
+</ul>
+
+<a href="#user-stories" id="user-stories" style="color: inherit; text-decoration: none;">
+  <h2>User Stories</h2>
+</a>
+<ul>
+<li>As a user, I should be able to receive information on movies, directors, and genres so that I can learn more about movies I&#39;ve watched or am interested in</li>
+<li>As a user, I should be able to create a profile so I can save data about my favorite movies.</li>
+</ul>
+
+<a href="#technical-requirements-amp-solutions" id="technical-requirements-amp-solutions" style="color: inherit; text-decoration: none;">
+  <h2>Technical Requirements &amp; Solutions</h2>
+</a>
+<ul>
+<li>The application must be written in Angular (version 9 or later)  </li>
+<li>The application requires the latest version of Node.js and npm package  </li>
+<li>The application must contain user registration and login forms  </li>
+<li>The application must be designed using Angular Material   </li>
+<li>The application&#39;s codebase must contain comments using Typedoc Documentation </li>
+<li>The the existing server-side <a href="https://github.com/nickbalan/myflix">MyFlix API</a> must contain technical JSDoc Documentation</li>
+<li>The project must be hosted on GitHub Pages.</li>
+</ul>
+
+<a href="#breakdown-project-deliverables-in-story-points" id="breakdown-project-deliverables-in-story-points" style="color: inherit; text-decoration: none;">
+  <h2>Breakdown Project Deliverables in Story Points</h2>
+</a>
+<ul>
+<li>Profile View Page -&gt; 21 story points</li>
+<li>Registration Page -&gt; 8 story points</li>
+<li>Login View Page -&gt; 8 story points </li>
+<li>Movie List -&gt; 8 story points</li>
+<li>Movie View Page -&gt; 5 story points</li>
+<li>Movie Card -&gt; 5 story points</li>
+<li>Genre View Page -&gt; 5 story points</li>
+<li>Director View Page -&gt; 5 story points</li>
+<li>Initiating the project and configuring the tools -&gt; 2 story points</li>
+<li>Main View Page -&gt; 21 story points</li>
+<li>Profile View Page -&gt; 21 story points</li>
+<li>Registration Page -&gt; 8 story points</li>
+<li>Login View Page -&gt; 8 story points </li>
+<li>Movie List -&gt; 8 story points</li>
+<li>Movie View Page -&gt; 5 story points</li>
+<li>Movie Card -&gt; 5 story points</li>
+<li>Genre View Page -&gt; 5 story points</li>
+<li>Director View Page -&gt; 5 story points</li>
+<li>Initiating the project and configuring the tools -&gt; 2 story points.</li>
+</ul>
 
 <a href="#key-features" id="key-features" style="color: inherit; text-decoration: none;">
   <h2>Key Features</h2>
 </a>
 <ul>
-<li>Your app should display a welcome view where users will be able to either log in or register an 
-account.  </li>
-<li>Once authenticated, the user should now view all movies.  </li>
-<li>Upon clicking on a particular movie, users will be taken to a single movie view, where 
-additional movie details will be displayed. The single movie view will contain the following 
-additional features:   <ul>
-<li>A button that when clicked takes a user to the ​ director view​, where details about the 
-director of that particular movie will be displayed. </li>
-<li>A button that when clicked takes a user to the ​ genre view​, where details about that 
-particular genre of the movie will be displayed.</li>
+<li>The app should display a welcome view where users will be able to either login or register an account.  </li>
+<li>Once authenticated, the user should now view all movies</li>
+<li>Upon clicking on a particular movie, users are taken to a single movie view, where additional movie details are displayed. The single movie view will contain the following additional features:   <ul>
+<li>A view details button, when clicked, takes a user to the director view​, where details about the director of that particular movie are displayed </li>
+<li>A view details button, when clicked, takes a user to the ​genre view​, where details about that particular genre of the movie are displayed.</li>
 </ul>
 </li>
 </ul>
@@ -45,10 +128,20 @@ particular genre of the movie will be displayed.</li>
 <a href="#running-end-to-end-tests" id="running-end-to-end-tests" style="color: inherit; text-decoration: none;">
   <h2>Running end-to-end tests</h2>
 </a>
-<p>Run <code>ng e2e</code> to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.</p>
+<p>Run <code>ng e2e</code> to execute the end-to-end tests via a platform of your choice. To use this command, you need first to add a package that implements end-to-end testing capabilities.</p>
 
 <a href="#further-help" id="further-help" style="color: inherit; text-decoration: none;">
   <h2>Further help</h2>
 </a>
-<p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://angular.io/cli">Angular CLI Overview and Command Reference</a> page.</p>
-</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Modules</a></li><li class=" tsd-kind-module"><a href="modules/DeleteUserComponent.html">Delete<wbr/>User<wbr/>Component</a></li><li class=" tsd-kind-module"><a href="modules/DirectorViewComponent.html">Director<wbr/>View<wbr/>Component</a></li><li class=" tsd-kind-module"><a href="modules/GenreViewComponent.html">Genre<wbr/>View<wbr/>Component</a></li><li class=" tsd-kind-module"><a href="modules/MovieDetailsComponent.html">Movie<wbr/>Details<wbr/>Component</a></li><li class=" tsd-kind-module"><a href="modules/NavBarComponent.html">Nav<wbr/>Bar<wbr/>Component</a></li><li class=" tsd-kind-module"><a href="modules/UserLoginFormComponent.html">User<wbr/>Login<wbr/>Form<wbr/>Component</a></li><li class=" tsd-kind-module"><a href="modules/UserProfileComponent.html">User<wbr/>Profile<wbr/>Component</a></li><li class=" tsd-kind-module"><a href="modules/UserRegistrationFormComponent.html">User<wbr/>Registration<wbr/>Form<wbr/>Component</a></li><li class=" tsd-kind-module"><a href="modules/WelcomePageComponent.html">Welcome<wbr/>Page<wbr/>Component</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
+<p>To get more help on the Angular CLI, use <code>ng help</code> or check out the <a href="https://angular.io/cli">Angular CLI Overview and Command Reference</a> page.</p>
+
+<a href="#link-to-live-hosted-myflix-angular-client-movie-app" id="link-to-live-hosted-myflix-angular-client-movie-app" style="color: inherit; text-decoration: none;">
+  <h2>Link to live hosted MyFlix Angular Client (Movie App)</h2>
+</a>
+<p>Check out the <a href="https://nickbalan.github.io/myflix-angular-client">MyFlix Angular Client</a> page.</p>
+
+<a href="#myflix-angular-client-screenshot" id="myflix-angular-client-screenshot" style="color: inherit; text-decoration: none;">
+  <h2>MyFlix Angular Client screenshot</h2>
+</a>
+<p><img src="src/assets/img/Livescreen_MyFlix_Angular_Client.JPG" alt="Livescreen"></p>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Modules</a></li><li class=" tsd-kind-module"><a href="modules/delete_account_delete_account_component.html">delete-<wbr/>account/delete-<wbr/>account.component</a></li><li class=" tsd-kind-module"><a href="modules/director_view_director_view_component.html">director-<wbr/>view/director-<wbr/>view.component</a></li><li class=" tsd-kind-module"><a href="modules/genre_view_genre_view_component.html">genre-<wbr/>view/genre-<wbr/>view.component</a></li><li class=" tsd-kind-module"><a href="modules/movie_details_movie_details_component.html">movie-<wbr/>details/movie-<wbr/>details.component</a></li><li class=" tsd-kind-module"><a href="modules/nav_bar_nav_bar_component.html">nav-<wbr/>bar/nav-<wbr/>bar.component</a></li><li class=" tsd-kind-module"><a href="modules/user_login_form_user_login_form_component.html">user-<wbr/>login-<wbr/>form/user-<wbr/>login-<wbr/>form.component</a></li><li class=" tsd-kind-module"><a href="modules/user_profile_user_profile_component.html">user-<wbr/>profile/user-<wbr/>profile.component</a></li><li class=" tsd-kind-module"><a href="modules/user_registration_form_user_registration_form_component.html">user-<wbr/>registration-<wbr/>form/user-<wbr/>registration-<wbr/>form.component</a></li><li class=" tsd-kind-module"><a href="modules/welcome_page_welcome_page_component.html">welcome-<wbr/>page/welcome-<wbr/>page.component</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
