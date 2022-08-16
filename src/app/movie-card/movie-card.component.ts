@@ -1,15 +1,16 @@
+// imports Angular components.
 import { Component, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-// import App components
+// imports App's components.
 import { GenreViewComponent } from '../genre-view/genre-view.component';
 import { DirectorViewComponent } from '../director-view/director-view.component';
 import { MovieDetailsComponent } from '../movie-details/movie-details.component';
 
 /**
- * Renders a grid of movie cards for each movie in the database:
  * @module MovieCardComponent
+ * @description renders a grid of movie cards for each movie in the database.
  */
 @Component({
   selector: 'app-movie-card',

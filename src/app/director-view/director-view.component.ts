@@ -1,9 +1,10 @@
+// imports Angular components.
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 /**
- * Renders information about the movie director in a dialog box:
  * @module DirectorViewComponent
+ * @description renders information about the movie director in a dialog box.
  */
 @Component({
   selector: 'app-director-view',
@@ -12,7 +13,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 
 /**
- * @param data - an object containing Director data:
+ * @param {object} data - an object containing Director data:
  * @param {string} data.Director.Name - an object element containing the Director name.
  * @param {string} data.Director.BirthYear - an object element containing the Director birthyear.
  * @param {string} data.Director.Biography - an object element containing the Director biography.
