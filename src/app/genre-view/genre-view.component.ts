@@ -1,9 +1,10 @@
+// imports Angular components.
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 /**
- * Renders the data about the movie genre in a dialog box:
  * @module GenreViewComponent
+ * @description renders the data about the movie genre in a dialog box.
  */
 @Component({
   selector: 'app-genre-view',
