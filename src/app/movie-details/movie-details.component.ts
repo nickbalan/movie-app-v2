@@ -1,9 +1,10 @@
+// imports Angular Material UI.
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 /**
- * Renders the discription of the Movie in a dialog box:
  * @module MovieDetailsComponent
+ * @description renders the discription of the Movie in a dialog box.
  */
 @Component({
   selector: 'app-movie-details',

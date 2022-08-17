@@ -1,9 +1,10 @@
+// imports Angular Material UI.
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-/**
- * Displays the navigation menu with MyFlix, Profile, and Logout buttons:
+/** 
  * @module NavBarComponent
+ * @description displays the navigation menu with MyFlix, Profile, and Logout buttons.
  */
 @Component({
   selector: 'app-nav-bar',

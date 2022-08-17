@@ -1,15 +1,16 @@
+// imports Angular Material UI.
 import { Component, OnInit, Input } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
-// Imports the dialog
+// imports the dialog component.
 import { MatDialogRef } from '@angular/material/dialog';
-// Imports the notifications
+// imports the notification component.
 import { MatSnackBar } from '@angular/material/snack-bar';
-// Imports the routing
+// imports the router component.
 import { Router } from '@angular/router';
 
 /**
- * Renders a login form for the user:
  * @module UserLoginFormComponent
+ * @description renders a login form for the user.
  */
 @Component({
   selector: 'app-user-login-form',
