@@ -1,13 +1,14 @@
+// imports Angular components.
 import { Component, OnInit } from '@angular/core';
-// Import App Components
+// import App's components.
 import { UserLoginFormComponent } from '../user-login-form/user-login-form.component';
 import { UserRegistrationFormComponent } from '../user-registration-form/user-registration-form.component';
-// Import Angular Material UI
+// import Angular Material UI.
 import { MatDialog } from '@angular/material/dialog';
 
 /**
- * Renders login and registration components and buttons:
  * @module WelcomePageComponent
+ * @description renders login and registration components and buttons.
  */
 @Component({
   selector: 'app-welcome-page',

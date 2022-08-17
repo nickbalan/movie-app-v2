@@ -1,7 +1,8 @@
-// imports Angular components.
+// imports Angular Material UI.
 import { Component, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+// imports the router component.
 import { Router } from '@angular/router';
 
 /**

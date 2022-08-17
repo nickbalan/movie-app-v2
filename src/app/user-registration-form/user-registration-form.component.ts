@@ -1,12 +1,13 @@
+// imports Angular components.
 import { Component, OnInit, Input } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
-// Import Angular Material UI
+// import Angular Material UI.
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 /**
- * Renders a registration form for users to make a new account:
  * @module UserRegistrationFormComponent
+ * @description renders a registration form for users to make a new account.
  */
 @Component({
   selector: 'app-user-registration-form',
