@@ -1,27 +1,26 @@
-// imports Angular Material UI.
+// imports Angular components.
 import { Component, OnInit } from '@angular/core';
+// imports Angular Material UI components.
 import { Router } from '@angular/router';
 
-/** 
+/**
  * @module NavBarComponent
- * @description displays the navigation menu with MyFlix, Profile, and Logout buttons.
+ * @description * Displays the navigation menu with MyFlix, Profile, and Logout buttons.
+ * * When a user clicks on links, it renders MyFlix (all movies), Profile (user profile), and Logout (logging out from the account).
  */
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss'],
 })
-
-/**
- * When a user clicks on links, it renders MyFlix (all movies), Profile (user profile), and Logout (logging out from the account).
- */
 export class NavBarComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
   /**
-   * When a user clicks on the Profile button, it navigates to the user profile.
+   * @function toProfile
+   * @description when a user clicks on the Profile button, it navigates to the user profile.
    */
   toProfile(): void {
     this.router.navigate(['users']);
