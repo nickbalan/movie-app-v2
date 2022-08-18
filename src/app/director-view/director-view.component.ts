@@ -1,5 +1,6 @@
-// imports Angular Material UI.
+// imports Angular components.
 import { Component, OnInit, Inject } from '@angular/core';
+// imports Angular Material UI components.
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 /**
