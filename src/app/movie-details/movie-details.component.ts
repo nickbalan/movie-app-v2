@@ -1,3 +1,7 @@
+/**
+ * @description renders the discription of the Movie in a dialog box.
+ * @module MovieDetailsComponent
+ */
 // imports Angular components.
 import { Component, OnInit, Inject } from '@angular/core';
 // imports Angular Material UI components.

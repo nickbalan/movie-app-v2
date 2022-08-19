@@ -1,11 +1,14 @@
-// imports Angular Material UI.
+/**
+ * @description renders a login form for the user.
+ * @module UserLoginFormComponent
+ */
+// imports Angular components.
 import { Component, OnInit, Input } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
-// imports the dialog component.
+// imports Angular Material UI components.
 import { MatDialogRef } from '@angular/material/dialog';
-// imports the notification component.
 import { MatSnackBar } from '@angular/material/snack-bar';
-// imports the router component.
+// imports Angular Router components.
 import { Router } from '@angular/router';
 
 /**
@@ -17,11 +20,6 @@ import { Router } from '@angular/router';
   templateUrl: './user-login-form.component.html',
   styleUrls: ['./user-login-form.component.scss'],
 })
-
-/**
- * @function UserLoginFormComponent
- * @param {string} userData - the user updates userData.
- */
 export class UserLoginFormComponent implements OnInit {
   @Input() userData = {
     Username: '',
@@ -39,11 +37,11 @@ export class UserLoginFormComponent implements OnInit {
 
   /**
    * @function loginUser
-   * Sends the form inputs to the backend.
-   * Logs into the user with the user's credentials.
-   * Uses [[FetchApiDataService.userLogin]].
-   * Saves username and token in localStorage and redirects to `/movies` page upon successful login.
-   * Gives a snackbar message if the login fails.
+   * @description sends the form inputs to the backend.
+   * * Logs into the user with the user's credentials.
+   * * Uses [[FetchApiDataService.userLogin]].
+   * * Saves username and token in localStorage and redirects to `/movies` page upon successful login.
+   * * Gives a snackbar message if the login fails.
    */
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe(

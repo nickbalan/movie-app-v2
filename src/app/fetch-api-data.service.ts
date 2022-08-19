@@ -1,19 +1,15 @@
 /**
- * This file contains all the functions for API calls.
  * @module FetchApiDataService
+ * @description this file contains all the functions for API calls.
  */
 import { Injectable } from '@angular/core';
 import {
   HttpClient,
   HttpHeaders,
-  HttpErrorResponse
+  HttpErrorResponse,
 } from '@angular/common/http';
-import {
-  Observable,
-  throwError
-} from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-
 
 /**
  * The root URL for the hosted API.
@@ -22,19 +18,19 @@ import { map, catchError } from 'rxjs/operators';
 const apiUrl = 'https://movies-api-21.herokuapp.com';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 
-/** 
+/**
  * Inject the HttpClient module to the constructor params
  * This will provide HttpClient to the entire class, making it available via this.http
  */
 export class FetchApiDataService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   /**
-   * This function calls the user registration endpoint.
    * @function userRegistration
+   * @description this function calls the user registration endpoint.
    * @param userDetails {Username: <string>, Password: <string>
    * Email: <string>, BirthDate: <string (optional)>}
    * @returns data for new user in JSON format
@@ -49,14 +45,12 @@ export class FetchApiDataService {
   public userRegistration(userDetails: any): Observable<any> {
     return this.http
       .post(apiUrl + '/users', userDetails)
-      .pipe(
-        catchError(this.handleError)
-      );
+      .pipe(catchError(this.handleError));
   }
 
   /**
-   * This function calls the user login endpoint.
    * @function userLogin
+   * @description this function calls the user login endpoint.
    * @param userDetails {Username: <string>, Password: <string>}
    * @returns  data for logged in user and JWT in JSON format
    * { user: {
@@ -74,15 +68,13 @@ export class FetchApiDataService {
     //console.log(userDetails);
     return this.http
       .post(apiUrl + '/login', userDetails)
-      .pipe(
-        catchError(this.handleError)
-      );
+      .pipe(catchError(this.handleError));
   }
 
   /**
-   * This function gets all movies data after login.
    * @function getAllMovies
    * Pulls token from localStorage for auth.
+   * @description this function gets all movies data after login.
    * @returns object containing array of data for all movies
    * {[
    *   Genre: { Name: <string>, Description: <string> },
@@ -98,21 +90,17 @@ export class FetchApiDataService {
     const token = localStorage.getItem('token');
     return this.http
       .get(apiUrl + '/movies', {
-        headers: new HttpHeaders(
-          {
-            Authorization: 'Bearer ' + token,
-          })
+        headers: new HttpHeaders({
+          Authorization: 'Bearer ' + token,
+        }),
       })
-      .pipe(
-        map(this.extractResponseData),
-        catchError(this.handleError)
-      );
+      .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
   /**
-   * This function gets the data for one single movie by title.
    * @function getMovie
    * Pulls token from localStorage for authentication
+   * @description this function gets the data for one single movie by title.
    * @param Title <any>
    * @returns object containing data for one single movie.
    * {
@@ -131,16 +119,13 @@ export class FetchApiDataService {
       .get(apiUrl + '/movies/' + Title, {
         headers: new HttpHeaders({ Authorization: 'Bearer ' + token }),
       })
-      .pipe(
-        map(this.extractResponseData),
-        catchError(this.handleError)
-      );
+      .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
   /**
-   * Gets one director name from API
    * @function getDirector
    * Pulls token from localStorage for authentication
+   * @description gets one director name from API
    * @param Director {any}
    * @return a director's info in JSON format
    */
@@ -150,16 +135,13 @@ export class FetchApiDataService {
       .get(apiUrl + '/directors/' + Director, {
         headers: new HttpHeaders({ Authorization: 'Bearer ' + token }),
       })
-      .pipe(map(
-        this.extractResponseData),
-        catchError(this.handleError)
-      );
+      .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
   /**
-   * Gets one genre data from API
    * @function getGenre
    * Pulls token from localStorage for authentication
+   * @description gets one genre data from API
    * @param Genre {any}
    * @return one genre's data in JSON format
    */
@@ -169,16 +151,13 @@ export class FetchApiDataService {
       .get(apiUrl + '/genres/' + Genre, {
         headers: new HttpHeaders({ Authorization: 'Bearer ' + token }),
       })
-      .pipe(map(
-        this.extractResponseData),
-        catchError(this.handleError)
-      );
+      .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
   /**
-   * This function calls to get user's data from API.
    * @function getUser
    * Pulls token from localStorage for authentication.
+   * @description this function calls to get user's data from API.
    * @returns object containing user's data.
    * { _id: <string>,
    *   Username: <string>,
@@ -195,16 +174,13 @@ export class FetchApiDataService {
       .get(apiUrl + '/users/' + username, {
         headers: new HttpHeaders({ Authorization: 'Bearer ' + token }),
       })
-      .pipe(map(
-        this.extractResponseData),
-        catchError(this.handleError)
-      );
+      .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
   /**
-   * This function gets the movie data of the user's favorite movie.
    * @function getFavoriteMovies
    * Pulls token from localStorage for authentication.
+   * @description this function gets the movie data of the user's favorite movie.
    * @returns [<string>]
    */
   getFavoriteMovies(): Observable<any> {
@@ -214,16 +190,13 @@ export class FetchApiDataService {
       .get(apiUrl + '/users/' + username + '/movies', {
         headers: new HttpHeaders({ Authorization: 'Bearer ' + token }),
       })
-      .pipe(map(
-        this.extractResponseData),
-        catchError(this.handleError)
-      );
+      .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
   /**
-   * This function adds a movie to a user's favorite list.
    * @function addFavoriteMovies
    * Pulls token from localStorage for authentication.
+   * @description this function adds a movie to a user's favorite list.
    * @param movieID <any>
    * @returns updated user data
    * { _id: <string>,
@@ -241,16 +214,13 @@ export class FetchApiDataService {
       .put(apiUrl + '/users/' + username + '/add-movies/' + MovieID, null, {
         headers: new HttpHeaders({ Authorization: 'Bearer ' + token }),
       })
-      .pipe(map(
-        this.extractResponseData),
-        catchError(this.handleError)
-      );
+      .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
   /**
-   * Deletes a movie from a user's favorite list.
    * @function deleteFavoriteMovie
    * Pulls token from localStorage for authentication.
+   * @description deletes a movie from a user's favorite list.
    * @param movieID <any>
    * @returns updated user data
    * { _id: <string>,
@@ -268,15 +238,13 @@ export class FetchApiDataService {
       .delete(apiUrl + '/users/' + username + '/delete-movies/' + movieId, {
         headers: new HttpHeaders({ Authorization: 'Bearer ' + token }),
       })
-      .pipe(map(
-        this.extractResponseData),
-        catchError(this.handleError)
-      );
+      .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
   /**
-   * This function updates the user's account info.
+   * @function editUser
    * Pulls username and token from local storage to use for endpoint and authorization.
+   * @description this function updates the user's account info.
    * @param userDetails {Username: <string>, Password: <string>,
    * Email: <string>, BirthDate: <string>} (all fields optional)
    * @returns updated user info
@@ -295,16 +263,13 @@ export class FetchApiDataService {
       .put(apiUrl + '/users/' + username, userDetails, {
         headers: new HttpHeaders({ Authorization: 'Bearer ' + token }),
       })
-      .pipe(map(
-        this.extractResponseData),
-        catchError(this.handleError)
-      );
+      .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
   /**
-   * This funtion deletes the current user's account
    * @function deleteUser
    * Pulls token from localStorage for authentication.
+   * @description this funtion deletes the current user's account
    * @returns delete status
    */
   deleteUser(): Observable<any> {
@@ -314,17 +279,14 @@ export class FetchApiDataService {
       .delete(apiUrl + '/users/' + username, {
         headers: new HttpHeaders({ Authorization: 'Bearer ' + token }),
       })
-      .pipe(map(
-        this.extractResponseData),
-        catchError(this.handleError)
-      );
+      .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 
   /**
-  * Non-typed response extracttion
-  * @param res {any}
-  * @returns response || empty object
-  */
+   * Non-typed response extracttion
+   * @param res {any}
+   * @returns response || empty object
+   */
   private extractResponseData(res: any): any {
     const body = res;
     return body || {};
@@ -336,12 +298,10 @@ export class FetchApiDataService {
       console.error('Some error occurred:', error.error.message);
     } else {
       console.error(
-        `Error Status code ${error.status}, ` +
-        `Error body is: ${error.error}`
+        `Error Status code ${error.status}, ` + `Error body is: ${error.error}`
       );
     }
 
-    return throwError(
-      'Something is wrong. Please, try again');
+    return throwError('Something is wrong. Please, try again');
   }
 }

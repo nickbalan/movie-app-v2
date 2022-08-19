@@ -37,10 +37,11 @@
       "src/app/user-login-form/user-login-form.component.ts",
       "src/app/nav-bar/nav-bar.component.ts",
       "src/app/movie-details/movie-details.component.ts",
+      "src/app/movie-card/movie-card.component.ts",
       "src/app/genre-view/genre-view.component.ts",
       "src/app/director-view/director-view.component.ts",
-      "src/app/delete-account/delete-account.component.ts",
-      "src/app/app.modules.ts"
+      "src/app/delete-account/delete-account.component.ts", 
+      "src/app/fetch-api-data.service.ts"
     ],
     "out": "docs"
   }

@@ -1,3 +1,7 @@
+/**
+ * @description renders a grid of movie cards for each movie in the database.
+ * @module MovieCardComponent
+ */
 // imports Angular components.
 import { Component, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service';
@@ -11,7 +15,8 @@ import { MovieDetailsComponent } from '../movie-details/movie-details.component'
 
 /**
  * @module MovieCardComponent
- * @description * Renders a grid of movie cards for each movie in the database. Each movie card has an image, links to open dialogs.
+ * @description renders a grid of movie cards for each movie in the database.
+ * * Each movie card has an image, links to open dialogs.
  * * The toggle button adds or removes a movie from the users favorite movie list.
  * * Renders the NavBar Component.
  */
@@ -48,7 +53,7 @@ export class MovieCardComponent implements OnInit {
   /**
    * @function addFavoriteToList
    * @param {string} movieID - containing the movie ID.
-   * @description * Adds a movie to a user's favorite list.
+   * @description adds a movie to a user's favorite list.
    * * Uses POST request [[FetchApiDataService.addFavoriteMovie]].
    */
   addFavoriteToList(movieID: string): void {
@@ -70,7 +75,7 @@ export class MovieCardComponent implements OnInit {
 
   /**
    * @function removeFavoriteMovies
-   * @description * Removes a movie from a user's favorite list.
+   * @description removes a movie from a user's favorite list.
    * * Uses DELETE request [[FetchApiDataService.removeFavoriteMovies]].
    * @param {string} movieID - containing the movie ID.
    */
@@ -93,7 +98,7 @@ export class MovieCardComponent implements OnInit {
 
   /**
    * @function getFavoriteMovies
-   * @description * Fetches the favorite movies from the database for a logged-in user.
+   * @description fetches the favorite movies from the database for a logged-in user.
    * * This function is called from within [[MovieCardComponent.getMovies]].
    */
   getFavoriteMovies(): void {
@@ -104,7 +109,7 @@ export class MovieCardComponent implements OnInit {
 
   /**
    * @function isFavorite
-   * @description * This is called after fetching [[MovieCardComponent.getFavoriteMovies]].
+   * @description this is called after fetching [[MovieCardComponent.getFavoriteMovies]].
    * * This function is called from within [[MovieCardComponent.getMovies]].
    * @param {string} movieId - containing the movie ID.
    */
@@ -158,7 +163,7 @@ export class MovieCardComponent implements OnInit {
 
   /**
    * @function toggleFavorite
-   * @description * Checks if a favorite movie icon is activated.
+   * @description checks if a favorite movie icon is activated.
    * * When a user clicks on the 'empty' icon of the favorite button, a POST request [[FetchApiDataService.addFavoriteMovie]] is sent to the database, add it to the favorite movies.
    * * When a user clicks on the 'full' icon of the favorite button, a DELETE request [[FetchApiDataService.removeFavoriteMovie]] is sent to the database to remove it from the favorite list.
    * @param {string} movieID - containing the movie ID.

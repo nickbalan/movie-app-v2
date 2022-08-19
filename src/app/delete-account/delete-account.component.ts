@@ -1,7 +1,12 @@
+/**
+ * @description renders a form for deleting a user account.
+ * @module DeleteAccountComponent
+ */
 // imports Angular components.
 import { Component, OnInit } from '@angular/core';
-// imports Angular Material UI components.
+// imports App's components.
 import { FetchApiDataService } from '../fetch-api-data.service';
+// imports Angular Material UI components.
 import { MatSnackBar } from '@angular/material/snack-bar';
 // imports Angular Router components.
 import { Router } from '@angular/router';
