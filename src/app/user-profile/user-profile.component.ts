@@ -1,5 +1,9 @@
 /**
  * @description renders the user profile information.
+ * * Sets a Class Decorator for the UserProfileComponent.
+ * * Sets a Parameters Decorator for the UserProfileComponent.
+ * * Renders the favorite movies list in the user profile.
+ * * Renders the NavBar component.
  * @module UserProfileComponent
  */
 // imports Angular components.
@@ -18,6 +22,8 @@ import { DeleteAccountComponent } from '../delete-account/delete-account.compone
 /**
  * @module UserProfileComponent
  * @description renders the user profile information.
+ * * Sets a Class Decorator for the UserProfileComponent.
+ * * Sets a Parameters Decorator for the UserProfileComponent.
  * * Renders the favorite movies list in the user profile.
  * * Renders the NavBar component.
  * @param {string} userData - an object containing:
@@ -27,11 +33,13 @@ import { DeleteAccountComponent } from '../delete-account/delete-account.compone
  * @param {string} userData.FavoriteMovies - an object containing the Favorite movies of the user.
  */
 @Component({
+  /* Sets a Class Decorator for the UserProfileComponent. */
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.scss'],
 })
 export class UserProfileComponent implements OnInit {
+  /* Sets a Parameters Decorator for the UserProfileComponent. */
   @Input() userData = {
     Username: '',
     Password: '',

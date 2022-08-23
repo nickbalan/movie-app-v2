@@ -1,5 +1,7 @@
 /**
  * @description renders login and registration components and buttons.
+ * * Sets a Class Decorator for the WelcomePageComponent.
+ * * The login landing page for users.
  * @module WelcomePageComponent
  */
 // imports Angular components.
@@ -13,9 +15,11 @@ import { MatDialog } from '@angular/material/dialog';
 /**
  * @module WelcomePageComponent
  * @description renders login and registration components and buttons.
+ * * Sets a Class Decorator for the WelcomePageComponent.
  * * The login landing page for users.
  */
 @Component({
+  /* Sets a Class Decorator for the WelcomePageComponent. */
   selector: 'app-welcome-page',
   templateUrl: './welcome-page.component.html',
   styleUrls: ['./welcome-page.component.scss'],
