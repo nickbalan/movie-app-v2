@@ -1,5 +1,7 @@
 /**
  * @description renders a login form for the user.
+ * * Sets a Class Decorator for the UserLoginFormComponent.
+ * * Sets a Parameters Decorator for the UserLoginFormComponent.
  * @module UserLoginFormComponent
  */
 // imports Angular components.
@@ -14,13 +16,17 @@ import { Router } from '@angular/router';
 /**
  * @module UserLoginFormComponent
  * @description renders a login form for the user.
+ * * Sets a Class Decorator for the UserLoginFormComponent.
+ * * Sets a Parameters Decorator for the UserLoginFormComponent.
  */
 @Component({
+  /* Sets a Class Decorator for the UserLoginFormComponent. */
   selector: 'app-user-login-form',
   templateUrl: './user-login-form.component.html',
   styleUrls: ['./user-login-form.component.scss'],
 })
 export class UserLoginFormComponent implements OnInit {
+  /* Sets a Parameters Decorator for the UserLoginFormComponent. */
   @Input() userData = {
     Username: '',
     Password: '',

@@ -1,5 +1,9 @@
 /**
  * @description renders a grid of movie cards for each movie in the database.
+ * * Sets a Class Decorator for the MovieCardComponent.
+ * * Each movie card has an image, links to open dialogs.
+ * * The toggle button adds or removes a movie from the users favorite movie list.
+ * * Renders the NavBar Component.
  * @module MovieCardComponent
  */
 // imports Angular components.
@@ -16,11 +20,13 @@ import { MovieDetailsComponent } from '../movie-details/movie-details.component'
 /**
  * @module MovieCardComponent
  * @description renders a grid of movie cards for each movie in the database.
+ * * Sets a Class Decorator for the MovieCardComponent.
  * * Each movie card has an image, links to open dialogs.
  * * The toggle button adds or removes a movie from the users favorite movie list.
  * * Renders the NavBar Component.
  */
 @Component({
+  /* Sets a Class Decorator for the MovieCardComponent. */
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss'],

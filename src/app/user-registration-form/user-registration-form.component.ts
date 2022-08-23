@@ -1,5 +1,8 @@
 /**
  * @description renders a registration form for users to make a new account.
+ * * Sets a Class Decorator for the UserRegistrationFormComponent.
+ * * Sets a Parameters Decorator for the UserRegistrationFormComponent.
+ * * The user updates the userData.
  * @module UserRegistrationFormComponent
  */
 // imports Angular components.
@@ -13,6 +16,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 /**
  * @module UserRegistrationFormComponent
  * @description renders a registration form for users to make a new account.
+ * * Sets a Class Decorator for the UserRegistrationFormComponent.
+ * * Sets a Parameters Decorator for the UserRegistrationFormComponent.
  * * The user updates the userData.
  * @param {string} userData - an object containing:
  * @param {string} userData.Username - an object element containing the Username of the user.
@@ -21,11 +26,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
  * @param {string} userData.Birthday - an object element containing the Birthday of the user.
  */
 @Component({
+  /* Sets a Class Decorator for the UserRegistrationFormComponent. */
   selector: 'app-user-registration-form',
   templateUrl: './user-registration-form.component.html',
   styleUrls: ['./user-registration-form.component.scss'],
 })
 export class UserRegistrationFormComponent implements OnInit {
+  /* Sets a Parameters Decorator for the UserRegistrationFormComponent. */
   @Input() userData = {
     Username: '',
     Password: '',
