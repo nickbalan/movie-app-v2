@@ -1,6 +1,6 @@
 /**
  * @description renders a form for deleting a user account.
- * * Sets a Class Decorator for the DeleteAccountComponent.
+ * * Sets a Class Decorator for the DeleteAccount component.
  * @module DeleteAccountComponent
  */
 // imports Angular components.
@@ -15,10 +15,10 @@ import { Router } from '@angular/router';
 /**
  * @module DeleteAccountComponent
  * @description renders a form for deleting a user account.
- * * Sets a Class Decorator for the DeleteAccountComponent.
+ * * Sets a Class Decorator for the DeleteAccount component.
  */
 @Component({
-  /* Sets a Class Decorator for the DeleteAccountComponent. */
+  /* Sets a Class Decorator for the DeleteAccount component. */
   selector: 'app-delete-account',
   templateUrl: './delete-account.component.html',
   styleUrls: ['./delete-account.component.scss'],

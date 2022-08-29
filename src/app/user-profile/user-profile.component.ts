@@ -1,7 +1,7 @@
 /**
  * @description renders the user profile information.
- * * Sets a Class Decorator for the UserProfileComponent.
- * * Sets a Parameters Decorator for the UserProfileComponent.
+ * * Sets a Class Decorator for the UserProfile component.
+ * * Sets a Parameters Decorator for the UserProfile component.
  * * Renders the favorite movies list in the user profile.
  * * Renders the NavBar component.
  * @module UserProfileComponent
@@ -22,8 +22,8 @@ import { DeleteAccountComponent } from '../delete-account/delete-account.compone
 /**
  * @module UserProfileComponent
  * @description renders the user profile information.
- * * Sets a Class Decorator for the UserProfileComponent.
- * * Sets a Parameters Decorator for the UserProfileComponent.
+ * * Sets a Class Decorator for the UserProfile component.
+ * * Sets a Parameters Decorator for the UserProfile component.
  * * Renders the favorite movies list in the user profile.
  * * Renders the NavBar component.
  * @param {string} userData - an object containing:
@@ -33,13 +33,13 @@ import { DeleteAccountComponent } from '../delete-account/delete-account.compone
  * @param {string} userData.FavoriteMovies - an object containing the Favorite movies of the user.
  */
 @Component({
-  /* Sets a Class Decorator for the UserProfileComponent. */
+  /* Sets a Class Decorator for the UserProfile component. */
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.scss'],
 })
 export class UserProfileComponent implements OnInit {
-  /* Sets a Parameters Decorator for the UserProfileComponent. */
+  /* Sets a Parameters Decorator for the UserProfile component. */
   @Input() userData = {
     Username: '',
     Password: '',
@@ -56,20 +56,20 @@ export class UserProfileComponent implements OnInit {
 
   /**
    * @function movies
-   * @description stores the data about each movie.
+   * @description stores the data about each movie in an array.
    */
   movies: any[] = [];
 
   /**
    * @function userFavouritesMovies
-   * @description stores a subset of movies containing only the user's favorite movie list.
+   * @description stores a subset of movies containing only the user's favorite movie list in an array.
    */
   userFavouritesMovies: any[] = [];
 
   /**
    * @function ngOnInit
    * @description fetches the logged-in user's data, downloads all the movie data, and maps the user's favorite movies.
-   * * If the API call fails, the user will be logged out and returned to the welcome screen.
+   * * If the API call fails, the user will be logged out and returned to the welcome page.
    */
   ngOnInit(): void {
     this.getUser();
@@ -78,7 +78,7 @@ export class UserProfileComponent implements OnInit {
 
   /**
    * @function removeFavoriteMovies
-   * @description remove the movie ID from the user's favorite list using the DELETE request [[FetchApiDataService.removeFavoriteMovie]].
+   * @description remove the movieID from the user's favorite list using the DELETE request [[FetchApiDataService.removeFavoriteMovie]].
    * * Then, reloads the user's profile page to update the user's favorite list.
    * @param {string} movieID - string containing the movie ID.
    */
@@ -102,7 +102,7 @@ export class UserProfileComponent implements OnInit {
 
   /**
    * @function getMovies
-   * @description all the movie data and save it into this.movies.
+   * @description renders all the movie data and save it into this.movies.
    * * Then, filter out the favorite movie list and save them into this.favoriteMovies.
    */
   getMovies(): void {
@@ -129,7 +129,7 @@ export class UserProfileComponent implements OnInit {
 
   /**
    * @function openDescriptionDialog
-   * @description opens a dialog box with a MovieDetailsComponent, passing the movie data into the component.
+   * @description opens a dialog box with a MovieDetails component, passing the movie data into the component.
    * @param {string} movie - an object containing:
    * @param {string} movie.Title - an object element containing the Movie title.
    * @param {string} movie.Description - an object element containing the Movie description.
@@ -144,7 +144,7 @@ export class UserProfileComponent implements OnInit {
 
   /**
    * @function openGenreDialog
-   * @description opens a dialog box with a GenreViewComponent, passing the Genre data into the component.
+   * @description opens a dialog box with a GenreView component, passing the Genre data into the component.
    * @param {string} Genre - an object containing:
    * @param {string} Genre.Name - an object element containing the Genre name.
    * @param {string} Genre.Description - an object element containing the Genre description.
@@ -158,7 +158,7 @@ export class UserProfileComponent implements OnInit {
 
   /**
    * @function openDirectorDialog
-   * @description opens a dialog box with a DirectorViewComponent, passing the Director data into the component.
+   * @description opens a dialog box with a DirectorView component, passing the Director data into the component.
    * @param {string} Director - an object containing:
    * @param {string} Director.Name - an object element containing the Director name.
    * @param {string} Director.BirthYear - an object element containing the Director birthyear.
@@ -174,7 +174,7 @@ export class UserProfileComponent implements OnInit {
 
   /**
    * @function openDialog
-   * @description when the user clicks on the Delete button from Profile, then DELETE the account profile.
+   * @description deletes the account profile when the user clicks the Delete button from Profile.
    */
   openDialog() {
     this.dialog.open(DeleteAccountComponent);

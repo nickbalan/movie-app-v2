@@ -1,7 +1,7 @@
 /**
- * @description renders a registration form for users to make a new account.
- * * Sets a Class Decorator for the UserRegistrationFormComponent.
- * * Sets a Parameters Decorator for the UserRegistrationFormComponent.
+ * @description renders a registration form to register a new account.
+ * * Sets a Class Decorator for the UserRegistrationForm component.
+ * * Sets a Parameters Decorator for the UserRegistrationForm component.
  * * The user updates the userData.
  * @module UserRegistrationFormComponent
  */
@@ -9,15 +9,15 @@
 import { Component, OnInit, Input } from '@angular/core';
 // imports App's components.
 import { FetchApiDataService } from '../fetch-api-data.service';
-// import Angular Material UI components.
+// imports Angular Material UI components.
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 /**
  * @module UserRegistrationFormComponent
  * @description renders a registration form for users to make a new account.
- * * Sets a Class Decorator for the UserRegistrationFormComponent.
- * * Sets a Parameters Decorator for the UserRegistrationFormComponent.
+ * * Sets a Class Decorator for the UserRegistrationForm component.
+ * * Sets a Parameters Decorator for the UserRegistrationForm component.
  * * The user updates the userData.
  * @param {string} userData - an object containing:
  * @param {string} userData.Username - an object element containing the Username of the user.
@@ -26,13 +26,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
  * @param {string} userData.Birthday - an object element containing the Birthday of the user.
  */
 @Component({
-  /* Sets a Class Decorator for the UserRegistrationFormComponent. */
+  /* Sets a Class Decorator for the UserRegistrationForm component. */
   selector: 'app-user-registration-form',
   templateUrl: './user-registration-form.component.html',
   styleUrls: ['./user-registration-form.component.scss'],
 })
 export class UserRegistrationFormComponent implements OnInit {
-  /* Sets a Parameters Decorator for the UserRegistrationFormComponent. */
+  /* Sets a Parameters Decorator for the UserRegistrationForm component. */
   @Input() userData = {
     Username: '',
     Password: '',

@@ -30,6 +30,7 @@
     "strictTemplates": true
   },
   "typedocOptions": {
+    "entryPointStrategy": "expand",
     "entryPoints": [
       "src/app/welcome-page/welcome-page.component.ts",
       "src/app/user-registration-form/user-registration-form.component.ts",
