@@ -1,7 +1,7 @@
 /**
  * @description renders a login form for the user.
- * * Sets a Class Decorator for the UserLoginFormComponent.
- * * Sets a Parameters Decorator for the UserLoginFormComponent.
+ * * Sets a Class Decorator for the UserLoginForm component.
+ * * Sets a Parameters Decorator for the UserLoginForm component.
  * @module UserLoginFormComponent
  */
 // imports Angular components.
@@ -15,18 +15,18 @@ import { Router } from '@angular/router';
 
 /**
  * @module UserLoginFormComponent
- * @description renders a login form for the user.
- * * Sets a Class Decorator for the UserLoginFormComponent.
- * * Sets a Parameters Decorator for the UserLoginFormComponent.
+ * @description renders a login form component.
+ * * Sets a Class Decorator for the UserLoginForm component.
+ * * Sets a Parameters Decorator for the UserLoginForm component.
  */
 @Component({
-  /* Sets a Class Decorator for the UserLoginFormComponent. */
+  /* Sets a Class Decorator for the UserLoginForm component. */
   selector: 'app-user-login-form',
   templateUrl: './user-login-form.component.html',
   styleUrls: ['./user-login-form.component.scss'],
 })
 export class UserLoginFormComponent implements OnInit {
-  /* Sets a Parameters Decorator for the UserLoginFormComponent. */
+  /* Sets a Parameters Decorator for the UserLoginForm component. */
   @Input() userData = {
     Username: '',
     Password: '',
@@ -43,7 +43,7 @@ export class UserLoginFormComponent implements OnInit {
 
   /**
    * @function loginUser
-   * @description sends the form inputs to the backend.
+   * @description sends the inputs form to the backend.
    * * Logs into the user with the user's credentials.
    * * Uses [[FetchApiDataService.userLogin]].
    * * Saves username and token in localStorage and redirects to `/movies` page upon successful login.
@@ -53,7 +53,7 @@ export class UserLoginFormComponent implements OnInit {
     this.fetchApiData.userLogin(this.userData).subscribe(
       (response) => {
         // Logic for the user login
-        this.dialogRef.close(); // Closes the modal after login
+        this.dialogRef.close(); // Closes the modal after login.
         localStorage.setItem('user', response.user.Username);
         localStorage.setItem('token', response.token);
         //console.log(response);

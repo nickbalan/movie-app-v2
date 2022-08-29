@@ -1,25 +1,25 @@
 /**
  * @description renders login and registration components and buttons.
- * * Sets a Class Decorator for the WelcomePageComponent.
- * * The login landing page for users.
+ * * Sets a Class Decorator for the WelcomePage component.
+ * * The login page for users.
  * @module WelcomePageComponent
  */
 // imports Angular components.
 import { Component, OnInit } from '@angular/core';
-// import App's components.
+// imports App's components.
 import { UserLoginFormComponent } from '../user-login-form/user-login-form.component';
 import { UserRegistrationFormComponent } from '../user-registration-form/user-registration-form.component';
-// import Angular Material UI components.
+// imports Angular Material UI components.
 import { MatDialog } from '@angular/material/dialog';
 
 /**
  * @module WelcomePageComponent
  * @description renders login and registration components and buttons.
- * * Sets a Class Decorator for the WelcomePageComponent.
- * * The login landing page for users.
+ * * Sets a Class Decorator for the WelcomePage component.
+ * * The login page for users.
  */
 @Component({
-  /* Sets a Class Decorator for the WelcomePageComponent. */
+  /* Sets a Class Decorator for the WelcomePage component. */
   selector: 'app-welcome-page',
   templateUrl: './welcome-page.component.html',
   styleUrls: ['./welcome-page.component.scss'],
@@ -31,7 +31,7 @@ export class WelcomePageComponent implements OnInit {
 
   /**
    * @function openUserRegistrationDialog
-   * @description when users click on the signup button, it opens the dialog box with [[UserRegistrationFormComponent]].
+   * @description opens the signup form component with buttons[[UserRegistrationFormComponent]].
    */
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
@@ -42,7 +42,7 @@ export class WelcomePageComponent implements OnInit {
 
   /**
    * @function openUserLoginDialog
-   * @description if the user is logged in, check the localStorage a saved and valid JWT token, and redirect the user to the /movies (MovieCardComponent) page.
+   * @description if the user is logged in, then checks the localStorage a saved and valid JWT token, and redirect the user to the /movies (MovieCardComponent) page.
    * * Otherwise, if the user has a JWT saved but is not valid, then the user will be logged out.
    */
   openUserLoginDialog(): void {
