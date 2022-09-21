@@ -6,14 +6,15 @@
  * * Renders the NavBar component.
  * @module UserProfileComponent
  */
-// imports Angular components.
+// imports Angular modules, hooks, and decorators.
 import { Component, OnInit, Input } from '@angular/core';
 import { formatDate } from '@angular/common';
-// imports Angular Material UI components.
+// imports Angular Material UI services.
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
-// imports App's components.
+// imports App's services.
 import { FetchApiDataService } from '../fetch-api-data.service';
+// imports App's modules.
 import { GenreViewComponent } from '../genre-view/genre-view.component';
 import { DirectorViewComponent } from '../director-view/director-view.component';
 import { MovieDetailsComponent } from '../movie-details/movie-details.component';

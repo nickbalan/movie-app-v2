@@ -4,9 +4,9 @@
  * * Sets a Parameters Decorator for the GenreView component.
  * @module GenreViewComponent
  */
-// imports Angular components.
+// imports Angular modules, hooks, and decorators.
 import { Component, OnInit, Inject } from '@angular/core';
-// imports Angular Material UI components.
+// imports Angular Material UI services.
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 /**

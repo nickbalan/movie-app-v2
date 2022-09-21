@@ -4,12 +4,12 @@
  * * The login page for users.
  * @module WelcomePageComponent
  */
-// imports Angular components.
+// imports Angular modules, hooks, and decorators.
 import { Component, OnInit } from '@angular/core';
-// imports App's components.
+// imports App's modules.
 import { UserLoginFormComponent } from '../user-login-form/user-login-form.component';
 import { UserRegistrationFormComponent } from '../user-registration-form/user-registration-form.component';
-// imports Angular Material UI components.
+// imports Angular Material UI services.
 import { MatDialog } from '@angular/material/dialog';
 
 /**

@@ -6,13 +6,14 @@
  * * Renders the NavBar Component.
  * @module MovieCardComponent
  */
-// imports Angular components.
+// imports Angular modules, hooks, and decorators.
 import { Component, OnInit } from '@angular/core';
+// improts App's services.
 import { FetchApiDataService } from '../fetch-api-data.service';
-// imports Angular Material UI components.
+// imports Angular Material UI services.
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-// imports App's components.
+// imports App's modules.
 import { GenreViewComponent } from '../genre-view/genre-view.component';
 import { DirectorViewComponent } from '../director-view/director-view.component';
 import { MovieDetailsComponent } from '../movie-details/movie-details.component';
