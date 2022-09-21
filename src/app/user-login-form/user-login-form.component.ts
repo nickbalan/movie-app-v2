@@ -4,13 +4,14 @@
  * * Sets a Parameters Decorator for the UserLoginForm component.
  * @module UserLoginFormComponent
  */
-// imports Angular components.
+// imports Angular modules, hooks, and decorators.
 import { Component, OnInit, Input } from '@angular/core';
+// improts App's services.
 import { FetchApiDataService } from '../fetch-api-data.service';
-// imports Angular Material UI components.
+// imports Angular Material UI services.
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-// imports Angular Router components.
+// imports Angular Router services.
 import { Router } from '@angular/router';
 
 /**

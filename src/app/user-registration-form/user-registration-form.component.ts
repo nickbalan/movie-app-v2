@@ -5,11 +5,11 @@
  * * The user updates the userData.
  * @module UserRegistrationFormComponent
  */
-// imports Angular components.
+// imports Angular modules, hooks, and decorators.
 import { Component, OnInit, Input } from '@angular/core';
-// imports App's components.
+// imports App's services.
 import { FetchApiDataService } from '../fetch-api-data.service';
-// imports Angular Material UI components.
+// imports Angular Material UI services.
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 

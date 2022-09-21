@@ -4,9 +4,9 @@
  * * When a user clicks on links, it renders MyFlix (all movies), Profile (user profile), and Logout (logging out from the account).
  * @module NavBarComponent
  */
-// imports Angular components.
+// imports Angular modules, hooks, and decorators.
 import { Component, OnInit } from '@angular/core';
-// imports Angular Router components.
+// imports Angular Router services.
 import { Router } from '@angular/router';
 
 /**

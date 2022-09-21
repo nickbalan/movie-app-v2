@@ -3,13 +3,13 @@
  * * Sets a Class Decorator for the DeleteAccount component.
  * @module DeleteAccountComponent
  */
-// imports Angular components.
+// imports Angular modules, hooks, and decorators.
 import { Component, OnInit } from '@angular/core';
-// imports App's components.
+// improts App's services.
 import { FetchApiDataService } from '../fetch-api-data.service';
-// imports Angular Material UI components.
+// imports Angular Material UI services.
 import { MatSnackBar } from '@angular/material/snack-bar';
-// imports Angular Router components.
+// imports Angular Router services.
 import { Router } from '@angular/router';
 
 /**
