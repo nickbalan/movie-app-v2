@@ -1,10 +1,10 @@
-# MyFlix Angular Client (Movie App). Technical Case Study
+# Client-Side App - MyFlix (Movie App). Technical Case Study
 
 This project was generated initially with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
 ## Objective
 
-Using Angular, build the client-side for an application called MyFlix Angular Client based on existing server-side code (REST API and database), supporting documentation.
+Build a client-side app with TypeScript and Angular as Front-End and a REST API as Back-End.
 
 ## Context
 
