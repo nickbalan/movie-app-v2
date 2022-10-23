@@ -1,4 +1,4 @@
-# Client-Side App - MyFlix (Movie App). Technical Case Study
+# Client-Side Movie App. Technical Case Study
 
 This project was generated initially with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
