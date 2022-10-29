@@ -10,16 +10,9 @@ Build a client-side app with TypeScript and Angular as Front-End and a REST API 
 
 Angular is a trendy framework used for a wide range of mobile and desktop applications. It's particularly well-suited to large projects and projects requiring a complex user interface because it comes with a variety of built-in modules and services.
 
-## Project Deliverables Acknowledgement
+## Project Owner, Management, and Acknowledgement
 
-- CareerFoundry (25.02.2021 - 17.03.2022)
-
-## Project Improvement Strategies
-
-- Nick Balan (18.03.2022 - Current):
-  - Updated the TypeDoc documentation
-  - Updated the components documentation
-  - Updated the Technical Case Study.
+[CareerFoundry](https://careerfoundry.com/) (25.02.2021 - 17.03.2022)
 
 ## My Role
 
@@ -47,6 +40,13 @@ Angular is a trendy framework used for a wide range of mobile and desktop applic
 - The application's codebase must be documented using TypeDoc
 - The the existing server-side [MyFlix API](https://github.com/nickbalan/myflix) must be documented using JSDoc
 - The project must be hosted on GitHub Pages.
+
+## Technical Improvements & Solutions
+
+### Done
+
+- Updated the TypeDoc documentation
+- Updated the components documentation.
 
 ## Breakdown Project Deliverables in Story Points
 
