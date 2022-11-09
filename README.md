@@ -1,4 +1,4 @@
-# Client-Side Movie App. Technical Case Study
+# Movie App v2. Technical Case Study
 
 This project was generated initially with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
@@ -20,8 +20,8 @@ Angular is a trendy framework used for a wide range of mobile and desktop applic
 
 ## The 5 W's
 
-- Who? — The users of the MyFlix Angular Client and codebase, including other web developers and designers
-- What? — A single-page, responsive MyFlix Angular Client (Movie App) built with Angular, routing, and several interface views. The client-side developed in this project supports the existing server-side from [MyFlix API](https://github.com/nickbalan/myflix) by facilitating user requests and rendering the response from the server-side via several different interface views. The app includes relevant documentation and handoff deliverables, including a [Kanban board](https://trello.com/b/uaMESjar/a6-movie-app-kanban-project) containing user stories and story points
+- Who? — The users of the Movie App v2 and codebase, including other web developers and designers
+- What? — A single-page, responsive Movie App v2 built with Angular, routing, and several interface views. The client-side developed in this project supports the existing server-side from [Movie API](https://github.com/nickbalan/movie-api) by facilitating user requests and rendering the response from the server-side via several different interface views. The app includes relevant documentation and handoff deliverables, including a [Kanban board](https://trello.com/b/uaMESjar/a6-movie-app-kanban-project) containing user stories and story points
 - When? — Users should be able to use the app whenever they want to read information about different movies or update their user information
 - Where? — The app is hosted online. It is responsive and can therefore be used anywhere and on any device, giving all users an equal experience
 - Why? — Movie enthusiasts should be able to access information about different movies, directors, and genres whenever they want. The app demonstrates my Angular skills and ability to create straightforward documentation for other developers and employers.
@@ -38,7 +38,7 @@ Angular is a trendy framework used for a wide range of mobile and desktop applic
 - The application must contain user registration and login forms
 - The application must be designed using Angular Material UI
 - The application's codebase must be documented using TypeDoc
-- The the existing server-side [MyFlix API](https://github.com/nickbalan/myflix) must be documented using JSDoc
+- The the existing server-side [Movie API](https://github.com/nickbalan/movie-api) must be documented using JSDoc
 - The project must be hosted on GitHub Pages.
 
 ## Technical Improvements & Solutions
@@ -102,10 +102,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI, use `ng help` or check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## Link to live hosted MyFlix Angular Client (Movie App)
+## Link to live hosted Movie App v2
 
-Check out the [MyFlix Angular Client](https://nickbalan.github.io/myflix-angular-client) page.
+Check out the [Movie App v2](https://nickbalan.github.io/movie-app-v2) page.
 
-## MyFlix Angular Client screenshot
+## Movie App v2 screenshot
 
-![Livescreen](src/assets/img/Livescreen_MyFlix_Angular_Client.JPG)
+![Livescreen](src/assets/img/Livescreen_Movie_App_v2.JPG)
