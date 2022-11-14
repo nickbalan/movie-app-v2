@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myFlix-Angular-client": {
+    "movie-app-v2": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-flix-angular-client",
+            "outputPath": "dist/movie-app-v2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "myFlix-Angular-client:build:production"
+              "browserTarget": "movie-app-v2:build:production"
             },
             "development": {
-              "browserTarget": "myFlix-Angular-client:build:development"
+              "browserTarget": "movie-app-v2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "myFlix-Angular-client:build"
+            "browserTarget": "movie-app-v2:build"
           }
         },
         "test": {
@@ -110,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "myFlix-Angular-client"
+  "defaultProject": "movie-app-v2"
 }
