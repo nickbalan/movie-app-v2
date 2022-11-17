@@ -1,7 +1,5 @@
 # Movie App v2. Technical Case Study
 
-This project was generated initially with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
-
 ## Objective
 
 Build a client-side app with TypeScript and Angular as Front-End and a REST API as Back-End.
@@ -83,6 +81,8 @@ Nick Balan (18.03.2022 - now)
   - A view details button, when clicked, takes a user to the ​genre view​, where details about that particular genre of the movie are displayed.
 
 ## Development server
+
+This project was generated initially with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
