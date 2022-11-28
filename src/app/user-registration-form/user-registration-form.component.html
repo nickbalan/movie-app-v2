@@ -35,8 +35,8 @@
           required
         />
       </mat-form-field>
-      <mat-form-field class="field" appearance="fill">
-        <mat-label>Enter your date of birth</mat-label>
+      <mat-form-field class="field" appearance="outline">
+        <mat-label>Choose your date of birth</mat-label>
         <input
           matInput
           [(ngModel)]="userData.Birthday"
@@ -48,10 +48,10 @@
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
     </form>
+    <mat-card-actions>
+      <button mat-raised-button (click)="registerUser()" color="primary">
+        Sign Up
+      </button>
+    </mat-card-actions>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-raised-button (click)="registerUser()" color="primary">
-      Sign Up
-    </button>
-  </mat-card-actions>
 </mat-card>
