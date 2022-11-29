@@ -5,7 +5,7 @@
   </mat-card-header>
   <mat-card-content>
     <form>
-      <mat-form-field class="field" appearance="outline">
+      <mat-form-field class="field row" appearance="outline">
         <mat-label>Enter your username</mat-label>
         <input
           matInput
@@ -15,7 +15,7 @@
           required
         />
       </mat-form-field>
-      <mat-form-field class="field" appearance="outline">
+      <mat-form-field class="field row" appearance="outline">
         <mat-label>Enter your password</mat-label>
         <input
           matInput
@@ -25,7 +25,7 @@
           required
         />
       </mat-form-field>
-      <mat-form-field class="field" appearance="outline">
+      <mat-form-field class="field row" appearance="outline">
         <mat-label>Email</mat-label>
         <input
           matInput
@@ -35,7 +35,7 @@
           required
         />
       </mat-form-field>
-      <mat-form-field class="field" appearance="outline">
+      <mat-form-field class="field row" appearance="outline">
         <mat-label>Choose your date of birth</mat-label>
         <input
           matInput
@@ -48,7 +48,7 @@
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
     </form>
-    <mat-card-actions>
+    <mat-card-actions class="button-row">
       <button mat-raised-button (click)="registerUser()" color="primary">
         Sign Up
       </button>
