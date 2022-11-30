@@ -3,7 +3,7 @@
 <div class="content">
   <div fxLayout="row wrap" fxLayoutGap="10px grid">
     <div
-      fxFlex="20%"
+      fxFlex="25%"
       fxFlex.xs="100%"
       fxFlex.sm="50%"
       *ngFor="let movie of movies"
@@ -11,6 +11,12 @@
       <mat-card>
         <mat-card-header>
           <mat-card-title>{{ movie.Title }}</mat-card-title>
+          <mat-card-subtitle
+            class="director-bio"
+            (click)="openDirectorDialog(movie.Director)"
+          >
+            Director: {{ movie.Director[0] }}
+          </mat-card-subtitle>
         </mat-card-header>
         <img
           mat-card-image
@@ -19,10 +25,7 @@
           alt="{{ movie.Title }}"
           (click)="openDescriptionDialog(movie)"
         />
-        <mat-card-content>
-          Directed by: {{ movie.Director[0] }}
-        </mat-card-content>
-        <mat-card-actions>
+        <mat-card-actions align="end">
           <button
             (click)="openDescriptionDialog(movie)"
             mat-button
@@ -35,14 +38,7 @@
             mat-button
             color="primary"
           >
-            Genre
-          </button>
-          <button
-            (click)="openDirectorDialog(movie.Director)"
-            mat-button
-            color="primary"
-          >
-            Director
+            {{ movie.Genre[0] }}
           </button>
           <button
             (click)="toggleFavorite(movie._id)"

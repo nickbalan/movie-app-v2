@@ -1,9 +1,10 @@
 <mat-toolbar class="navbar">
-  <div (click)="toMovies()" style="cursor: pointer">
+  <div class="logo" (click)="toMovies()">
     <mat-icon>local_movies</mat-icon>
-    <a style="color: black">MyFlix</a>
+    <span>Movie App v2</span>
   </div>
-  <div>
+  <span class="spacer"></span>
+  <div class="navbar-button">
     <a mat-button (click)="toProfile()">
       Profile<mat-icon>manage_accounts</mat-icon>
     </a>
