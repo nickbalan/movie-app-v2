@@ -112,12 +112,12 @@ Check out the [Movie App v2](https://nickbalan.github.io/movie-app-v2) live page
 
 ## Movie App v2 screenshots
 
-![Livescreen](src/assets/img/Movie_App_v2_Livescreen_1)
-![Livescreen](src/assets/img/Movie_App_v2_Livescreen_2)
-![Livescreen](src/assets/img/Movie_App_v2_Livescreen_3)
-![Livescreen](src/assets/img/Movie_App_v2_Livescreen_4)
-![Livescreen](src/assets/img/Movie_App_v2_Livescreen_5)
-![Livescreen](src/assets/img/Movie_App_v2_Livescreen_6)
-![Livescreen](src/assets/img/Movie_App_v2_Livescreen_7)
-![Livescreen](src/assets/img/Movie_App_v2_Livescreen_8)
-![Livescreen](src/assets/img/Movie_App_v2_Livescreen_9)
+![Livescreen](src/assets/img/Movie_App_v2_Livescreen_1.JPG)
+![Livescreen](src/assets/img/Movie_App_v2_Livescreen_2.JPG)
+![Livescreen](src/assets/img/Movie_App_v2_Livescreen_3.JPG)
+![Livescreen](src/assets/img/Movie_App_v2_Livescreen_4.JPG)
+![Livescreen](src/assets/img/Movie_App_v2_Livescreen_5.JPG)
+![Livescreen](src/assets/img/Movie_App_v2_Livescreen_6.JPG)
+![Livescreen](src/assets/img/Movie_App_v2_Livescreen_7.JPG)
+![Livescreen](src/assets/img/Movie_App_v2_Livescreen_8.JPG)
+![Livescreen](src/assets/img/Movie_App_v2_Livescreen_9.JPG)
