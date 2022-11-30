@@ -35,12 +35,12 @@ Nick Balan (18.03.2022 - now)
 
 ## Technical Requirements & Solutions
 
+- The application must use the [Movie API](https://github.com/nickbalan/movie-api) as Back-End
 - The application must be written in Angular (version 9 or later)
 - The application requires the latest version of Node.js and npm package
 - The application must contain user registration and login forms
 - The application must be designed using Angular Material UI
 - The application's codebase must be documented using TypeDoc
-- The the existing server-side [Movie API](https://github.com/nickbalan/movie-api) must be documented using JSDoc
 - The project must be hosted on GitHub Pages.
 
 ## Technical Improvements & Solutions
