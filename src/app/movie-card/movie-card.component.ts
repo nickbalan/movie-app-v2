@@ -134,7 +134,7 @@ export class MovieCardComponent implements OnInit {
    */
   openDescriptionDialog(movie: any): void {
     this.dialog.open(MovieDetailsComponent, {
-      width: '280px',
+      width: '100vh',
       data: { movie },
     });
   }
@@ -148,7 +148,7 @@ export class MovieCardComponent implements OnInit {
    */
   openGenreDialog(Genre: any): void {
     this.dialog.open(GenreViewComponent, {
-      width: '280px',
+      width: '100vh',
       data: { Genre },
     });
   }
@@ -163,7 +163,7 @@ export class MovieCardComponent implements OnInit {
    */
   openDirectorDialog(Director: any): void {
     this.dialog.open(DirectorViewComponent, {
-      width: '280px',
+      width: '100vh',
       data: { Director },
     });
   }
