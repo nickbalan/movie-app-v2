@@ -15,7 +15,7 @@ import { map, catchError } from 'rxjs/operators';
  * The root URL for the hosted API.
  * Declaring the API URL that will provide the data, then the user calls it.
  */
-const apiUrl = 'https://movie-api-22.onrender.com';
+const apiUrl = 'https://movie-api-production-57fd.up.railway.app';
 
 @Injectable({
   providedIn: 'root',
