@@ -106,9 +106,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI, use `ng help` or check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## Link to live hosted Movie App v2
+## Live Demo
 
-Check out the [Movie App v2](https://nickbalan.github.io/movie-app-v2) live page.
+Check out the [Movie App v2 - Live page](https://nickbalan.github.io/movie-app-v2).
 
 ## Movie App v2 screenshots
 
